@@ -1,0 +1,141 @@
+/* Reset 기본 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #fdfdfd;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+/* 전체 입력 컨테이너 */
+.update-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
+  width: 900px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* 각 입력 행 */
+.update-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #555;
+  width: 100%;
+}
+
+.update-row label {
+  width: 30%;
+  text-align: left;
+  font-weight: bold;
+}
+
+.update-row input {
+  width: 65%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+/* 이미지 미리보기 */
+.image-upload img {
+  width: 100px;
+  height: 100px;
+  border-radius: 6px;
+  object-fit: fill;
+  margin-left: 10px;
+  border: 1px solid #ddd;
+}
+
+/* 파일 선택 버튼 (필요 시 사용) */
+.file-label {
+  background: linear-gradient(135deg, #f2f2f2, #e0e0e0);
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.file-label:hover {
+  background: linear-gradient(135deg, #e0e0e0, #d4d4d4);
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(170, 170, 170, 0.3);
+}
+
+/* 수정 버튼 */
+button {
+  background: linear-gradient(135deg, #e6e6e6, #dcdcdc);
+  color: #333;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  width: 200px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #dcdcdc, #cfcfcf);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 10px rgba(170, 170, 170, 0.3);
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+  .update-container {
+    padding: 20px;
+  }
+
+  button {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .update-container {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 10px;
+  }
+}

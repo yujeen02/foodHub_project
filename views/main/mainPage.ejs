@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CHOI'S FoodHub</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 헤더 -->
+    <div id="head">
+      <div id="bookMark">
+        <!-- <a href="/heartPage"> -->
+        <img src="/images/bookWhite.png" alt="북마크 아이콘" />
+        <!-- </a> -->
+      </div>
+      <div id="headerName">CHOI'S FoodHub</div>
+    </div>
+
+    <div id="choice">
+      <h1>당신이 원하는 맛집은 무엇인가요?</h1>
+      <form action="/search" method="GET">
+        <div id="search">
+          <input
+            type="text"
+            name="name"
+            placeholder="식당명 입력"
+            id="restaurantName"
+          />
+          <img
+            src="/images/icon_search.png"
+            alt="검색 아이콘"
+            id="searchIcon"
+          />
+        </div>
+      </form>
+    </div>
+
+    <!-- 음식 목록 -->
+    <div class="food-container">
+      <% food.forEach((item) => { %>
+      <div class="foodBox">
+        <a href="/detail/<%= item.id %>">
+          <img src="<%= item.image %>" alt="<%= item.foodName %>" />
+        </a>
+        <div class="info">
+          <div class="resName"><%= item.resName %></div>
+          <div class="tagAndRating">
+            <div class="rating">⭐ <%= item.rating %> / 5</div>
+            <div class="tag"><%= item.tag %></div>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+
+    <!-- 푸터 -->
+    <div class="bottom">
+      <div class="footer-logo">
+        <div class="cinemaNameBottom">CHOI'S FoodHub</div>
+      </div>
+      <div class="footer-info">
+        <p>서울특별시 송파구 올림픽로 1234 CHOI빌딩 18F</p>
+        <p>
+          대표 이메일: dreamcometrue@choifoodhub.co.kr | 고객센터: 1544-6848
+          (유료) | 사업자등록번호: 010-00-00000
+        </p>
+        <p>
+          대표이사: 최유진 | 개인정보 보호 책임자: 김동동 | 호스팅 제공자: CHOI
+          이노베이트
+        </p>
+      </div>
+      <p class="footer-copyright">
+        Copyright © CHOI FoodHub All Rights Reserved.
+      </p>
+    </div>
+  </body>
+</html>

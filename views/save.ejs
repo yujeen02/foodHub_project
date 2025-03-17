@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>음식 저장</title>
+    <link rel="stylesheet" href="/static/css/save.css" />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="input-wrap">
+      <form id="uploadForm">
+        <input type="file" name="image" required />
+        <input type="file" name="subImage" multiple required />
+        <input type="text" name="resName" placeholder="가게명" />
+        <input type="text" name="tag" placeholder="# 해시태그" />
+        <input type="text" name="foodName" placeholder="음식명" required />
+        <input type="number" name="price" placeholder="가격" required />
+        <input type="text" name="address" placeholder="가게 주소" required />
+        <input type="text" name="latitude" placeholder="위도" required />
+        <input type="text" name="longitude" placeholder="경도" required />
+        <input
+          type="number"
+          name="rating"
+          placeholder="평점 (0~5)"
+          min="0"
+          max="5"
+          step="0.5"
+          required
+        />
+
+        <!-- 카테고리 선택 추가 -->
+        <select name="category" required>
+          <option value="" disabled selected>카테고리 선택</option>
+          <option value="양식">양식</option>
+          <option value="일식">일식</option>
+          <option value="삼겹살">삼겹살</option>
+          <option value="회식">회식</option>
+          <option value="분위기 맛집">분위기 맛집</option>
+        </select>
+
+        <div id="content"></div>
+
+        <button class="saveBtn" onclick="createData(event)">등록</button>
+      </form>
+    </div>
+
+    <div class="main-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>이미지</th>
+            <th>식당 이름</th>
+            <th>메뉴명</th>
+            <th># 해시태그</th>
+            <th>후기</th>
+            <th>평점</th>
+            <th>주소</th>
+            <th colspan="2">관리</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% food.forEach((item) => { %>
+          <tr>
+            <td class="img">
+              <img src="<%= item.image %>" alt="음식 이미지" />
+              <!-- <img src="<%= item.subImage1 %>" alt="서브 이미지" /> -->
+              <!-- <img src="<%= item.subImage2 %>" alt="서브 이미지" /> -->
+            </td>
+            <td><%= item.resName %></td>
+            <td><%= item.foodName %></td>
+            <td><%= item.tag %></td>
+            <td class="food-comment"><%= item.comment %></td>
+            <td>⭐ <%= item.rating %> / 5</td>
+            <td><%= item.address %></td>
+            <td>
+              <button class="editBtn" onclick="updatePage('<%= item.id %>')">
+                수정
+              </button>
+            </td>
+            <td>
+              <button class="deleteBtn" onclick="deleteList('<%= item.id %>')">
+                삭제
+              </button>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+    <script src="/static/js/save.js"></script>
+  </body>
+</html>

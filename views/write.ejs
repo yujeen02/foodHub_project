@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>음식 정보 수정</title>
+    <link rel="stylesheet" href="/static/css/write.css" />
+    <link
+      rel="stylesheet"
+      href="https://uicdn.toast.com/editor/latest/toastui-editor.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>수정 페이지</h1>
+    <div class="update-container">
+      <!-- 메인 사진 업로드 -->
+      <div class="image-upload update-row">
+        <label for="imageUpload">메인 사진:</label>
+        <input type="file" id="imageUpload" name="image" />
+        <img
+          src="<%= foodByMo[0].image %>"
+          class="preview-image"
+          alt="메인 이미지"
+        />
+      </div>
+
+      <!-- 서브 사진 업로드 -->
+      <div class="image-upload update-row">
+        <label for="subImage1Upload">서브 사진1:</label>
+        <input type="file" id="subImage1Upload" name="subImage1" />
+        <img
+          src="<%= foodByMo[0].subImage1 %>"
+          class="preview-image"
+          alt="서브 이미지1"
+        />
+      </div>
+
+      <div class="image-upload update-row">
+        <label for="subImage2Upload">서브 사진2:</label>
+        <input type="file" id="subImage2Upload" name="subImage2" />
+        <img
+          src="<%= foodByMo[0].subImage2 %>"
+          class="preview-image"
+          alt="서브 이미지2"
+        />
+      </div>
+
+      <!-- 가게 정보 입력 필드 -->
+      <div class="update-row">
+        <label for="resName">가게명:</label>
+        <input id="resName" name="resName" value="<%= foodByMo[0].resName %>" />
+      </div>
+
+      <div class="update-row">
+        <label for="foodName">음식명:</label>
+        <input
+          id="foodName"
+          name="foodName"
+          value="<%= foodByMo[0].foodName %>"
+        />
+      </div>
+      <div class="update-row">
+        <label for="tag"># 해시태그:</label>
+        <input id="tag" name="tag" value="<%= foodByMo[0].tag %>" />
+      </div>
+      <div class="update-row">
+        <label for="price">가격:</label>
+        <input id="price" name="price" value="<%= foodByMo[0].price %>" />
+      </div>
+      <div class="update-row">
+        <label for="address">가게 주소:</label>
+        <input id="address" name="address" value="<%= foodByMo[0].address %>" />
+      </div>
+      <div class="update-row">
+        <label for="latitude">위도:</label>
+        <input
+          id="latitude"
+          name="latitude"
+          value="<%= foodByMo[0].latitude %>"
+        />
+      </div>
+      <div class="update-row">
+        <label for="longitude">경도:</label>
+        <input
+          id="longitude"
+          name="longitude"
+          value="<%= foodByMo[0].longitude %>"
+        />
+      </div>
+      <div class="update-row">
+        <label for="rating">평점:</label>
+        <input id="rating" name="rating" value="<%= foodByMo[0].rating %>" />
+      </div>
+      <div class="update-row">
+        <label for="category">카테고리:</label>
+        <select id="category" name="category" required>
+          <option value="" disabled>카테고리 선택</option>
+          <option value="양식" `<%= foodByMo[0].category === '양식' ? 'selected' : '' %>`>양식</option>
+          <option value="일식" `<%= foodByMo[0].category === '일식' ? 'selected' : '' %>`>일식</option>
+          <option value="삼겹살" `<%= foodByMo[0].category === '삼겹살' ? 'selected' : '' %>`>삼겹살</option>
+          <option value="회식" `<%= foodByMo[0].category === '회식' ? 'selected' : '' %>`>회식</option>
+        </select>
+      </div>
+      
+      <span id="content"></span>
+    </div>
+    <button onclick="updateForm('<%= foodByMo[0].id %>')">수정</button>
+  </body>
+  <script src="https://uicdn.toast.com/editor/latest/toastui-editor-all.min.js"></script>
+  <script src="/static/js/write.js"></script>
+</html>

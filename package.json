@@ -1,0 +1,32 @@
+{
+  "name": "foodhub_project",
+  "version": "1.0.0",
+  "description": "📌 **사용자는 원하는 맛집을 확인하고, 관리자는 맛집 정보를 저장 및 수정할 수 있는 웹사이트입니다.**  \r 네이버 맵 API를 활용하여 위치 정보를 확인하고, 검색 기능을 통해 원하는 맛집을 손쉽게 찾을 수 있습니다.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node apps.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yujeen02/foodHub_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yujeen02/foodHub_project/issues"
+  },
+  "homepage": "https://github.com/yujeen02/foodHub_project#readme",
+  "dependencies": {
+    "axios": "^1.8.1",
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "express-generator": "^4.16.1",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "mysql2": "^3.12.0",
+    "sequelize": "^6.37.5",
+    "sequelize-cli": "^6.6.2"
+  }
+}

@@ -1,0 +1,233 @@
+/* 기본 스타일 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+#head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#bookMark img {
+  width: 30px;
+  cursor: pointer;
+}
+
+#headerName {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 10px;
+  white-space: nowrap; /* 줄바꿈 방지 */
+}
+
+/* 검색창 스타일 */
+#choice {
+  width: 100%;
+  background-color: #074565; /* 어두운 파란색 배경 */
+  color: #ffffff; /* 텍스트 색상 흰색 */
+  height: 300px;
+  padding-top: 100px; /* 상단 여백을 늘려서 내용 내려주기 */
+  margin-top: 30px; /* 아래로 내릴 추가 여백 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  align-items: center;
+}
+
+#choice h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#choice {
+  width: 100%;
+  background-color: #074565; /* 어두운 파란색 배경 */
+  color: #ffffff; /* 텍스트 색상 흰색 */
+  height: 300px;
+  padding-top: 100px; /* 상단 여백을 늘려서 내용 내려주기 */
+  margin-top: 30px; /* 아래로 내릴 추가 여백 */
+  text-align: center; /* 텍스트 중앙 정렬 */
+  display: flex;
+  flex-direction: column; /* 수직 배치 */
+  align-items: center; /* 수평 중앙 정렬 */
+}
+
+#choice h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#search {
+  display: flex; /* flexbox로 배치 */
+  align-items: center; /* 수직 중앙 정렬 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  width: 100%;
+  max-width: 400px; /* 최대 너비 설정 */
+  height: 45px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid #ffffff; /* 흰색 테두리 */
+  border-radius: 25px; /* 둥근 모서리 */
+  background-color: #ffffff; /* 배경 흰색 */
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  position: relative; /* 아이콘을 input 안에 배치할 수 있도록 */
+}
+
+#search input {
+  width: 90%;
+  height: 100%;
+  border: none;
+  background: transparent; /* 배경 투명 */
+  font-size: 16px;
+  text-align: center; /* 텍스트 중앙 정렬 */
+}
+
+#search input::placeholder {
+  color: #aaa;
+  font-size: 14px;
+}
+
+#search input:focus {
+  background-color: #f0f8ff; /* 포커스 시 연한 파란색 배경 */
+  border-color: #074565; /* 포커스 시 테두리 색상 변경 */
+  box-shadow: 0 0 8px rgba(7, 69, 101, 0.5); /* 포커스 시 그림자 */
+}
+
+/* 검색 아이콘 스타일 */
+#searchIcon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%); /* 아이콘을 수직 중앙에 배치 */
+  width: 20px; /* 아이콘 크기 */
+  height: 20px;
+  cursor: pointer;
+}
+
+/* 🍽 음식 목록 컨테이너 */
+.food-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4개씩 정렬 */
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px; /* 간격 */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: auto;
+  min-height: 500px; /* 최소 높이 설정 */
+  padding: 30px 20px 20px; /* 헤더 높이 고려 */
+  flex-grow: 1;
+  margin-top: 30px;
+}
+
+/* 📌 개별 음식 박스 */
+.foodBox {
+  width: 100%;
+  max-width: 350px; /* 최대 400px */
+  overflow: hidden;
+  text-align: left;
+  padding-bottom: 30px;
+}
+
+/* 🖼 모든 이미지 동일 크기 */
+.foodBox img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.info {
+  width: 100%;
+  max-width: 350px; /* 최대 400px */
+  overflow: hidden;
+  text-align: left;
+}
+
+.tagAndRating {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2px;
+  padding-right: 4px;
+  font-size: 12px;
+}
+
+.tag {
+  color: #777777;
+}
+
+/* 🍽 음식 정보 스타일 */
+.resName {
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ⚫ 푸터 스타일 (화면 하단에 고정 & 꽉 차도록 설정) */
+.bottom {
+  color: rgb(75, 72, 72);
+  padding: 20px;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
+}
+
+.footer-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-info p {
+  font-size: 12px;
+  margin: 5px 0;
+}
+
+.footer-copyright {
+  font-size: 10px;
+  margin-top: 10px;
+}
+
+/* 📱 반응형 디자인 */
+@media (max-width: 1200px) {
+  .food-container {
+    grid-template-columns: repeat(3, 1fr); /* 화면 크기가 줄어들면 3개씩 */
+  }
+}
+
+@media (max-width: 900px) {
+  .food-container {
+    grid-template-columns: repeat(2, 1fr); /* 더 작은 화면에서는 2개씩 */
+  }
+}
+
+@media (max-width: 600px) {
+  .food-container {
+    grid-template-columns: repeat(1, 1fr); /* 모바일에서는 1개씩 */
+  }
+}
