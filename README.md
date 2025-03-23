@@ -27,9 +27,6 @@
 - 검색창에서 식당명을 입력하면 원하는 맛집으로 이동 가능 🔍  
 
 
-![Image](https://github.com/user-attachments/assets/1e9ab821-2527-43fe-ae31-faac66202b7b)
-![Image](https://github.com/user-attachments/assets/1778ce81-5f4e-42a1-95d2-4188d6ff9812)
-
 ---
 
 ### 📍 상세 페이지
@@ -37,13 +34,13 @@
 - 추천 맛집을 보며 다른 식당도 함께 탐색 가능 🍜  
 
 📌 **위치 확인 (네이버 맵 API)**  
-![Image](https://github.com/user-attachments/assets/05726245-7c4d-44f1-a184-5e601270966f)
+
 
 📌 **검색을 통한 상세 페이지 이동**  
-![Image](https://github.com/user-attachments/assets/8fd1b0b6-d9d4-463b-913e-6c2f216d34fa)
+
 
 
 📌 **추천 맛집 확인 및 상세 페이지 이동**  
-![Image](https://github.com/user-attachments/assets/1b55f453-fca4-44fd-8c49-b6a6684eee6b)
+
 
 ---
