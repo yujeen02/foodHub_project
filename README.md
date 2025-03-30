@@ -13,11 +13,12 @@
   <li>맛집 정보 수정 및 삭제 ✏️</li>
 </ul>
 
-<p><strong>📌 유효성 검사</strong><br />- 필수 항목 누락 시 알림창을 통해 사용자에게 경고</p>
-
+<p><strong>📌 유효성 검사</strong><br />사용자가 필수 항목을 입력하지 않을 경우, 아래와 같이 각 항목 아래에 빨간색 문구로 오류 메시지가 출력됩니다.</p>
+<img src="https://github.com/user-attachments/assets/99006520-6768-41f2-91a6-866bf562514f" alt="유효성 검사" width="auto" />
 <p><strong>📌 저장 버튼 클릭 시</strong><br />- 이미지 및 입력 데이터를 <code>FormData</code>를 활용해 서버로 전송</p>
 
 <p><strong>📌 내용 수정</strong><br />- 기존 데이터 불러오기 및 수정 후 저장 가능</p>
+<img src="https://github.com/user-attachments/assets/41753beb-2490-4c32-af9f-295025b89568" alt="유효성 검사" width="auto" />
 
 <hr />
 
@@ -27,8 +28,8 @@
   <li>검색창에서 식당명을 입력하면 원하는 맛집으로 이동 가능 🔍</li>
 </ul>
 
-<img src="https://github.com/user-attachments/assets/cba98846-a35a-44ff-936d-cfbc7084843e" alt="맛집 목록" width="600px" style="margin-bottom:10px;" />
-<img src="https://github.com/user-attachments/assets/3b123df5-a821-44cb-a4d1-447fc3e92c60" alt="검색 기능" width="600px" />
+<img src="https://github.com/user-attachments/assets/cba98846-a35a-44ff-936d-cfbc7084843e" alt="맛집 목록" width="auto" style="margin-bottom:10px;" />
+<img src="https://github.com/user-attachments/assets/3b123df5-a821-44cb-a4d1-447fc3e92c60" alt="검색 기능" width="auto" />
 
 <hr />
 
@@ -39,10 +40,10 @@
 </ul>
 
 <p><strong>📌 위치 확인 (네이버 맵 API)</strong></p>
-<img src="https://github.com/user-attachments/assets/9b56137c-5e94-4d1e-8b4f-17ea18fbb647" alt="네이버맵 위치" width="600px" />
+<img src="https://github.com/user-attachments/assets/9b56137c-5e94-4d1e-8b4f-17ea18fbb647" alt="네이버맵 위치" width="auto" />
 
 <p><strong>📌 추천 맛집 확인 및 상세 페이지 이동</strong></p>
-<img src="https://github.com/user-attachments/assets/08e1e842-9465-4f79-af05-6b5701a4473a" alt="추천 맛집" width="600px" />
+<img src="https://github.com/user-attachments/assets/08e1e842-9465-4f79-af05-6b5701a4473a" alt="추천 맛집" width="auto" />
 
 <hr />
 
