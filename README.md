@@ -18,8 +18,9 @@
 <p><strong>📌 저장 버튼 클릭 시</strong><br />- 이미지 및 입력 데이터를 <code>FormData</code>를 활용해 서버로 전송</p>
 <img src="https://github.com/user-attachments/assets/22a05f60-6f87-441b-a9de-5e06630353bc" alt="내용 저장" width="auto" />
 
-<p><strong>📌 내용 수정</strong><br />- 기존 데이터 불러오기 및 수정 후 저장 가능</p>
-<img src="" alt="내용 수정" width="auto" />
+<p><strong>📌 수정 페이지로 이동</strong><br />- 기존 데이터 불러오기 및 수정 후 저장 가능</p>
+<img src="https://github.com/user-attachments/assets/df6a756b-13a2-4a4d-bcb2-2824c93dcc96" alt="수정 페이지" width="auto" />
+<img src="https://github.com/user-attachments/assets/f6029af3-4524-462b-b1af-4e6ba411010f" alt="내용 수정" width="auto" />
 
 <p><strong>📌 내용 삭제</strong><br />- 맛집 정보 삭제 가능</p>
 <img src="https://github.com/user-attachments/assets/f84d3529-73b4-47d7-a52a-941b6fa14d97" alt="내용 삭제" width="auto" />
