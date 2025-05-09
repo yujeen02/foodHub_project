@@ -65,7 +65,7 @@ app.get("/get-images", (req, res) => {
 });
 
 app.get("/config", (req, res) => {
-  res.json({ NCP_CLIENT_ID: process.env.NCP_CLIENT_ID });
+  res.json({ NCP_CLIENT_ID: process.env.local.NCP_CLIENT_ID });
 });
 
 app.listen(port, () => {
